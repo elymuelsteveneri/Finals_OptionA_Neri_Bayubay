@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../Project.UI/Project.UI.csproj" />
+  <Project Path="OptionA_Neri_Bayubay.csproj" />
+</Solution>

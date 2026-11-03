@@ -1,0 +1,6 @@
+@OptionA_Neri_Bayubay_HostAddress = http://localhost:5277
+
+GET {{OptionA_Neri_Bayubay_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
