@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "daEKxxwLadE=",
+  "dgSpecHash": "DBX3mWIAFeE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Camille Erika\\source\\repos\\OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jay-R\\.nuget\\packages\\microsoft.openapi\\2.7.5\\microsoft.openapi.2.7.5.nupkg.sha512",
+    "C:\\Users\\Jay-R\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\10.3.1\\swashbuckle.aspnetcore.swagger.10.3.1.nupkg.sha512",
+    "C:\\Users\\Jay-R\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\10.3.1\\swashbuckle.aspnetcore.swaggergen.10.3.1.nupkg.sha512",
+    "C:\\Users\\Jay-R\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\10.3.1\\swashbuckle.aspnetcore.swaggerui.10.3.1.nupkg.sha512"
+  ],
   "logs": []
 }

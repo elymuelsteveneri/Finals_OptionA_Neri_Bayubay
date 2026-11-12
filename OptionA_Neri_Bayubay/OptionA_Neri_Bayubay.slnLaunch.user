@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "..\\Project.UI\\Project.UI.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "OptionA_Neri_Bayubay.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

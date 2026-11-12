@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Camille Erika\\source\\repos\\Project.UI\\Project.UI.csproj": {}
+    "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\Project.UI\\Project.UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Camille Erika\\source\\repos\\Project.UI\\Project.UI.csproj": {
+    "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\Project.UI\\Project.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Camille Erika\\source\\repos\\Project.UI\\Project.UI.csproj",
+        "projectUniqueName": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\Project.UI\\Project.UI.csproj",
         "projectName": "Project.UI",
-        "projectPath": "C:\\Users\\Camille Erika\\source\\repos\\Project.UI\\Project.UI.csproj",
-        "packagesPath": "C:\\Users\\Camille Erika\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Camille Erika\\source\\repos\\Project.UI\\obj\\",
+        "projectPath": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\Project.UI\\Project.UI.csproj",
+        "packagesPath": "C:\\Users\\Jay-R\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\Project.UI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Camille Erika\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jay-R\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.403/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

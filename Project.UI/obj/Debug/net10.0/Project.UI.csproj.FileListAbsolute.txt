@@ -1,0 +1,16 @@
+C:\Users\Jay-R\OneDrive\Documents\GITHUB\Finals_OptionA_Neri_Bayubay\Project.UI\bin\Debug\net10.0\Project.UI.exe
+C:\Users\Jay-R\OneDrive\Documents\GITHUB\Finals_OptionA_Neri_Bayubay\Project.UI\bin\Debug\net10.0\Project.UI.deps.json
+C:\Users\Jay-R\OneDrive\Documents\GITHUB\Finals_OptionA_Neri_Bayubay\Project.UI\bin\Debug\net10.0\Project.UI.runtimeconfig.json
+C:\Users\Jay-R\OneDrive\Documents\GITHUB\Finals_OptionA_Neri_Bayubay\Project.UI\bin\Debug\net10.0\Project.UI.dll
+C:\Users\Jay-R\OneDrive\Documents\GITHUB\Finals_OptionA_Neri_Bayubay\Project.UI\bin\Debug\net10.0\Project.UI.pdb
+C:\Users\Jay-R\OneDrive\Documents\GITHUB\Finals_OptionA_Neri_Bayubay\Project.UI\obj\Debug\net10.0\Project.UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jay-R\OneDrive\Documents\GITHUB\Finals_OptionA_Neri_Bayubay\Project.UI\obj\Debug\net10.0\Project.UI.AssemblyInfoInputs.cache
+C:\Users\Jay-R\OneDrive\Documents\GITHUB\Finals_OptionA_Neri_Bayubay\Project.UI\obj\Debug\net10.0\Project.UI.AssemblyInfo.cs
+C:\Users\Jay-R\OneDrive\Documents\GITHUB\Finals_OptionA_Neri_Bayubay\Project.UI\obj\Debug\net10.0\Project.UI.csproj.CoreCompileInputs.cache
+C:\Users\Jay-R\OneDrive\Documents\GITHUB\Finals_OptionA_Neri_Bayubay\Project.UI\obj\Debug\net10.0\Project.UI.sourcelink.json
+C:\Users\Jay-R\OneDrive\Documents\GITHUB\Finals_OptionA_Neri_Bayubay\Project.UI\obj\Debug\net10.0\Project.UI.dll
+C:\Users\Jay-R\OneDrive\Documents\GITHUB\Finals_OptionA_Neri_Bayubay\Project.UI\obj\Debug\net10.0\refint\Project.UI.dll
+C:\Users\Jay-R\OneDrive\Documents\GITHUB\Finals_OptionA_Neri_Bayubay\Project.UI\obj\Debug\net10.0\Project.UI.pdb
+C:\Users\Jay-R\OneDrive\Documents\GITHUB\Finals_OptionA_Neri_Bayubay\Project.UI\obj\Debug\net10.0\Project.UI.genruntimeconfig.cache
+C:\Users\Jay-R\OneDrive\Documents\GITHUB\Finals_OptionA_Neri_Bayubay\Project.UI\obj\Debug\net10.0\ref\Project.UI.dll
+C:\Users\Jay-R\OneDrive\Documents\GITHUB\Finals_OptionA_Neri_Bayubay\Project.UI\obj\Debug\net10.0\Project.UI.csproj.Up2Date

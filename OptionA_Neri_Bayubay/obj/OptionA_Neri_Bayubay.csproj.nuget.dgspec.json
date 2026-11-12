@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Camille Erika\\source\\repos\\OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay.csproj": {}
+    "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Camille Erika\\source\\repos\\OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay.csproj": {
+    "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Camille Erika\\source\\repos\\OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay.csproj",
+        "projectUniqueName": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay.csproj",
         "projectName": "OptionA_Neri_Bayubay",
-        "projectPath": "C:\\Users\\Camille Erika\\source\\repos\\OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay.csproj",
-        "packagesPath": "C:\\Users\\Camille Erika\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Camille Erika\\source\\repos\\OptionA_Neri_Bayubay\\obj\\",
+        "projectPath": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay.csproj",
+        "packagesPath": "C:\\Users\\Jay-R\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Camille Erika\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jay-R\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -51,6 +51,20 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[10.3.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[10.3.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[10.3.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -70,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.403/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
