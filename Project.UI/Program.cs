@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -11,7 +10,7 @@ namespace Project.UI
         {
             using (HttpClient client = new HttpClient())
             {
-                // Change this to your API's actual HTTPS address.
+             
                 client.BaseAddress = new Uri("https://localhost:7156/");
 
                 Console.WriteLine("Connecting to Campus IT Asset API...");

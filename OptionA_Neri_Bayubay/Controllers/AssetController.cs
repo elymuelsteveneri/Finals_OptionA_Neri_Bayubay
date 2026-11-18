@@ -1,5 +1,4 @@
-﻿
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using OptionA_Neri_Bayubay.Interfaces;
 using OptionA_Neri_Bayubay.Models;
 
@@ -16,7 +15,11 @@ namespace CampusITTracker.Controllers
             this.service = service;
         }
 
+        // ──────────────────────────────────────────────
         // GET: api/asset
+        // VIEW ALL ASSETS
+        // ──────────────────────────────────────────────
+
         [HttpGet]
         public ActionResult<List<AssetResponse>> GetAll()
         {
@@ -30,35 +33,115 @@ namespace CampusITTracker.Controllers
             return Ok(result);
         }
 
-        // GET: api/asset/WS-001
+        // ──────────────────────────────────────────────
+        // GET: api/asset/{tag}
+        // VIEW ASSET DETAILS
+        // ──────────────────────────────────────────────
+
         [HttpGet("{tag}")]
         public ActionResult<AssetResponse> GetByTag(string tag)
         {
             if (string.IsNullOrWhiteSpace(tag))
-            {
                 return BadRequest("Asset tag is required.");
-            }
 
             CampusAsset asset = service.Get(tag.Trim());
 
             if (asset == null)
-            {
                 return NotFound("Asset not found.");
-            }
 
             return Ok(ConvertToResponse(asset));
         }
 
+        // ──────────────────────────────────────────────
+        // PHASE 3: SEARCH AND FILTER
+        // ──────────────────────────────────────────────
+
+        [HttpGet("search")]
+        public ActionResult<List<AssetResponse>> SearchAssets(string text)
+        {
+            List<AssetResponse> result = new List<AssetResponse>();
+
+            foreach (CampusAsset asset in service.Search(text))
+            {
+                result.Add(ConvertToResponse(asset));
+            }
+
+            return Ok(result);
+        }
+
+        [HttpGet("type/{typeName}")]
+        public ActionResult<List<AssetResponse>> GetByType(string typeName)
+        {
+            List<AssetResponse> result = new List<AssetResponse>();
+
+            foreach (CampusAsset asset in service.GetByType(typeName))
+            {
+                result.Add(ConvertToResponse(asset));
+            }
+
+            return Ok(result);
+        }
+
+        [HttpGet("status/{status}")]
+        public ActionResult<List<AssetResponse>> GetByStatus(string status)
+        {
+            if (!Enum.TryParse<AssetStatus>(
+                status, true, out AssetStatus assetStatus))
+            {
+                return BadRequest("Invalid asset status.");
+            }
+
+            List<AssetResponse> result = new List<AssetResponse>();
+
+            foreach (CampusAsset asset in service.GetByStatus(assetStatus))
+            {
+                result.Add(ConvertToResponse(asset));
+            }
+
+            return Ok(result);
+        }
+
+        // ──────────────────────────────────────────────
+        // PHASE 3: BUSINESS LOGIC REPORTS
+        // ──────────────────────────────────────────────
+
+        [HttpGet("maintenance")]
+        public ActionResult<List<AssetResponse>> GetMaintenanceReport()
+        {
+            List<AssetResponse> result = new List<AssetResponse>();
+
+            foreach (CampusAsset asset in service.GetInRepair())
+            {
+                result.Add(ConvertToResponse(asset));
+            }
+
+            return Ok(result);
+        }
+
+        [HttpGet("depreciation")]
+        public ActionResult<List<AssetResponse>> GetDepreciationReport()
+        {
+            List<AssetResponse> result = new List<AssetResponse>();
+
+            foreach (CampusAsset asset in service.GetAll())
+            {
+                result.Add(ConvertToResponse(asset));
+            }
+
+            return Ok(result);
+        }
+
+        // ──────────────────────────────────────────────
         // POST: api/asset
+        // ADD ASSET
+        // ──────────────────────────────────────────────
+
         [HttpPost]
         public ActionResult AddAsset(AssetRequest request)
         {
             if (request == null)
-            {
                 return BadRequest("Asset information is required.");
-            }
 
-            // Validate common fields
             if (string.IsNullOrWhiteSpace(request.AssetType))
                 return BadRequest("Asset type is required.");
 
@@ -107,8 +190,11 @@ namespace CampusITTracker.Controllers
                         request.LabRoom.Trim()
                     );
 
-                    ((Workstation)asset).IpAddress = request.IpAddress?.Trim() ?? "";
-                    ((Workstation)asset).MacAddress = request.MacAddress?.Trim() ?? "";
+                    ((Workstation)asset).IpAddress =
+                        request.IpAddress?.Trim() ?? "";
+
+                    ((Workstation)asset).MacAddress =
+                        request.MacAddress?.Trim() ?? "";
 
                     break;
 
@@ -129,8 +215,11 @@ namespace CampusITTracker.Controllers
                         request.PortCount
                     );
 
-                    ((NetworkingHardware)asset).IpAddress = request.IpAddress?.Trim() ?? "";
-                    ((NetworkingHardware)asset).MacAddress = request.MacAddress?.Trim() ?? "";
+                    ((NetworkingHardware)asset).IpAddress =
+                        request.IpAddress?.Trim() ?? "";
+
+                    ((NetworkingHardware)asset).MacAddress =
+                        request.MacAddress?.Trim() ?? "";
 
                     break;
 
@@ -176,23 +265,31 @@ namespace CampusITTracker.Controllers
                     break;
 
                 default:
-                    return BadRequest("Invalid asset type. Choose Workstation, NetworkingHardware, Peripheral, or SoftwareLicense.");
+                    return BadRequest(
+                        "Invalid asset type. Choose Workstation, NetworkingHardware, Peripheral, or SoftwareLicense.");
             }
 
             if (!service.Add(asset))
-            {
                 return Conflict("Asset tag already exists.");
-            }
 
             return Ok("Asset added successfully.");
         }
 
-        // PUT: api/asset/WS-001
+        // ──────────────────────────────────────────────
+        // PUT: api/asset/{tag}
+        // UPDATE ASSET
+        // ──────────────────────────────────────────────
+
         [HttpPut("{tag}")]
-        public ActionResult UpdateAsset(string tag, AssetRequest request)
+        public ActionResult UpdateAsset(
+            string tag,
+            [FromBody] AssetUpdateRequest request)
         {
             if (string.IsNullOrWhiteSpace(tag))
                 return BadRequest("Asset tag is required.");
+
+            if (request == null)
+                return BadRequest("Update information is required.");
 
             CampusAsset asset = service.Get(tag.Trim());
 
@@ -215,10 +312,24 @@ namespace CampusITTracker.Controllers
             asset.PurchaseDate = request.PurchaseDate;
             asset.PurchasePrice = request.PurchasePrice;
 
+            // PHASE 4: SAVE UPDATED ASSET TO JSON
+            try
+            {
+                service.Save();
+            }
+            catch (InvalidOperationException ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+
             return Ok("Asset updated successfully.");
         }
 
-        // DELETE: api/asset/WS-001
+        // ──────────────────────────────────────────────
+        // DELETE: api/asset/{tag}
+        // DELETE ASSET
+        // ──────────────────────────────────────────────
+
         [HttpDelete("{tag}")]
         public ActionResult DeleteAsset(string tag)
         {
@@ -241,7 +352,63 @@ namespace CampusITTracker.Controllers
             return Ok("Asset deleted successfully.");
         }
 
-        // Convert the different asset classes into one response format.
+        // ──────────────────────────────────────────────
+        // BORROWING: CHECK OUT ASSET
+        // ──────────────────────────────────────────────
+
+        [HttpPost("checkout")]
+        public ActionResult CheckOutAsset([FromBody] CheckOutRequest request)
+        {
+            if (request == null)
+                return BadRequest("Borrowing information is required.");
+
+            if (string.IsNullOrWhiteSpace(request.AssetTag))
+                return BadRequest("Asset tag is required.");
+
+            if (string.IsNullOrWhiteSpace(request.BorrowerId))
+                return BadRequest("Borrower ID is required.");
+
+            string result = service.CheckOut(
+                request.AssetTag.Trim(),
+                request.BorrowerId.Trim());
+
+            if (result == "Asset not found.")
+                return NotFound(result);
+
+            if (result != "OK")
+                return BadRequest(result);
+
+            return Ok("Asset checked out successfully.");
+        }
+
+        // ──────────────────────────────────────────────
+        // BORROWING: CHECK IN ASSET
+        // ──────────────────────────────────────────────
+
+        [HttpPost("checkin")]
+        public ActionResult CheckInAsset([FromBody] CheckInRequest request)
+        {
+            if (request == null)
+                return BadRequest("Return information is required.");
+
+            if (string.IsNullOrWhiteSpace(request.AssetTag))
+                return BadRequest("Asset tag is required.");
+
+            string result = service.Return(request.AssetTag.Trim());
+
+            if (result == "Asset not found.")
+                return NotFound(result);
+
+            if (result != "OK")
+                return BadRequest(result);
+
+            return Ok("Asset checked in successfully.");
+        }
+
+        // ──────────────────────────────────────────────
+        // CONVERT ASSET TO RESPONSE
+        // ──────────────────────────────────────────────
+
         private AssetResponse ConvertToResponse(CampusAsset asset)
         {
             AssetResponse response = new AssetResponse();
@@ -287,5 +454,24 @@ namespace CampusITTracker.Controllers
 
             return response;
         }
+    }
+
+    // ──────────────────────────────────────────────
+    // CHECK OUT REQUEST
+    // ──────────────────────────────────────────────
+
+    public class CheckOutRequest
+    {
+        public string AssetTag { get; set; } = "";
+        public string BorrowerId { get; set; } = "";
+    }
+
+    // ──────────────────────────────────────────────
+    // CHECK IN REQUEST
+    // ──────────────────────────────────────────────
+
+    public class CheckInRequest
+    {
+        public string AssetTag { get; set; } = "";
     }
 }

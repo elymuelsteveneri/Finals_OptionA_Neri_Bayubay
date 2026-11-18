@@ -3,8 +3,46 @@
   "WorkspaceRootPath": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\interfaces\\iborrowable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:interfaces\\iborrowable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\interfaces\\inetworkable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:interfaces\\inetworkable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\models\\softwarelicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:models\\softwarelicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\models\\peripheral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:models\\peripheral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\models\\campusasset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:models\\campusasset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\models\\workstation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:models\\workstation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\models\\networkinghardware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:models\\networkinghardware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\controllers\\assetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:controllers\\assetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\services\\assetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:services\\assetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5532F081-9DAB-FACE-56E9-26F311CD7A2B}|..\\Project.UI\\Project.UI.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\project.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5532F081-9DAB-FACE-56E9-26F311CD7A2B}|..\\Project.UI\\Project.UI.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\project.ui\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\models\\assetrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,50 +53,16 @@
       "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:models\\assetresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5532F081-9DAB-FACE-56E9-26F311CD7A2B}|..\\Project.UI\\Project.UI.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\project.ui\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5532F081-9DAB-FACE-56E9-26F311CD7A2B}|..\\Project.UI\\Project.UI.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\project.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\models\\networkinghardware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:models\\networkinghardware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\models\\workstation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:models\\workstation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\models\\campusasset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:models\\campusasset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\models\\peripheral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:models\\peripheral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\models\\softwarelicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:models\\softwarelicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\interfaces\\inetworkable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:interfaces\\inetworkable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\interfaces\\iborrowable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:interfaces\\iborrowable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\models\\assetupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:models\\assetupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\models\\assetstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:models\\assetstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|c:\\users\\jay-r\\onedrive\\documents\\github\\finals_optiona_neri_bayubay\\optiona_neri_bayubay\\services\\assetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4ABEE49-1560-105C-BA18-E6A1F4708678}|OptionA_Neri_Bayubay.csproj|solutionrelative:services\\assetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -68,99 +72,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAswAwAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T05:49:10.423Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AssetResponse.cs",
-              "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\AssetResponse.cs",
-              "RelativeDocumentMoniker": "Models\\AssetResponse.cs",
-              "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\AssetResponse.cs",
-              "RelativeToolTip": "Models\\AssetResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T05:57:26.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AssetRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\AssetRequest.cs",
-              "RelativeDocumentMoniker": "Models\\AssetRequest.cs",
-              "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\AssetRequest.cs",
-              "RelativeToolTip": "Models\\AssetRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T05:57:00.375Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainMenu.cs",
-              "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\Project.UI\\MainMenu.cs",
-              "RelativeDocumentMoniker": "..\\Project.UI\\MainMenu.cs",
-              "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\Project.UI\\MainMenu.cs",
-              "RelativeToolTip": "..\\Project.UI\\MainMenu.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAwwFAAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T05:08:56.497Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\Project.UI\\Program.cs",
-              "RelativeDocumentMoniker": "..\\Project.UI\\Program.cs",
-              "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\Project.UI\\Program.cs",
-              "RelativeToolTip": "..\\Project.UI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T04:56:15.063Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AssetController.cs",
-              "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Controllers\\AssetController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AssetController.cs",
-              "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Controllers\\AssetController.cs",
-              "RelativeToolTip": "Controllers\\AssetController.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAswFgAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T08:53:24.063Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AssetService.cs",
-              "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Services\\AssetService.cs",
-              "RelativeDocumentMoniker": "Services\\AssetService.cs",
-              "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Services\\AssetService.cs",
-              "RelativeToolTip": "Services\\AssetService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAANMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T08:12:01.094Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "AssetStatus.cs",
               "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\AssetStatus.cs",
               "RelativeDocumentMoniker": "Models\\AssetStatus.cs",
@@ -168,7 +84,112 @@
               "RelativeToolTip": "Models\\AssetStatus.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T08:11:09.264Z"
+              "WhenOpened": "2026-11-03T08:11:09.264Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AssetUpdateRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\AssetUpdateRequest.cs",
+              "RelativeDocumentMoniker": "Models\\AssetUpdateRequest.cs",
+              "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\AssetUpdateRequest.cs",
+              "RelativeToolTip": "Models\\AssetUpdateRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-14T15:20:08.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T05:49:10.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AssetResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\AssetResponse.cs",
+              "RelativeDocumentMoniker": "Models\\AssetResponse.cs",
+              "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\AssetResponse.cs",
+              "RelativeToolTip": "Models\\AssetResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T05:57:26.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AssetRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\AssetRequest.cs",
+              "RelativeDocumentMoniker": "Models\\AssetRequest.cs",
+              "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\AssetRequest.cs",
+              "RelativeToolTip": "Models\\AssetRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T05:57:00.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\Project.UI\\MainMenu.cs",
+              "RelativeDocumentMoniker": "..\\Project.UI\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\Project.UI\\MainMenu.cs",
+              "RelativeToolTip": "..\\Project.UI\\MainMenu.cs",
+              "ViewState": "AgIAAEoCAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T05:08:56.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\Project.UI\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Project.UI\\Program.cs",
+              "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\Project.UI\\Program.cs",
+              "RelativeToolTip": "..\\Project.UI\\Program.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T04:56:15.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AssetController.cs",
+              "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Controllers\\AssetController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AssetController.cs",
+              "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Controllers\\AssetController.cs",
+              "RelativeToolTip": "Controllers\\AssetController.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAAwNYBAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T08:53:24.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AssetService.cs",
+              "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Services\\AssetService.cs",
+              "RelativeDocumentMoniker": "Services\\AssetService.cs",
+              "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Services\\AssetService.cs",
+              "RelativeToolTip": "Services\\AssetService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEBAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T08:12:01.094Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -178,61 +199,66 @@
               "RelativeDocumentMoniker": "Models\\NetworkingHardware.cs",
               "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\NetworkingHardware.cs",
               "RelativeToolTip": "Models\\NetworkingHardware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAuwDoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T08:10:36.547Z"
+              "WhenOpened": "2026-11-03T08:10:36.547Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "Workstation.cs",
               "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\Workstation.cs",
               "RelativeDocumentMoniker": "Models\\Workstation.cs",
               "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\Workstation.cs",
               "RelativeToolTip": "Models\\Workstation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA8wHIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T08:10:20.822Z"
+              "WhenOpened": "2026-11-03T08:10:20.822Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "CampusAsset.cs",
               "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\CampusAsset.cs",
               "RelativeDocumentMoniker": "Models\\CampusAsset.cs",
               "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\CampusAsset.cs",
               "RelativeToolTip": "Models\\CampusAsset.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAUwDUAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T08:10:00.75Z"
+              "WhenOpened": "2026-11-03T08:10:00.75Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "Peripheral.cs",
               "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\Peripheral.cs",
               "RelativeDocumentMoniker": "Models\\Peripheral.cs",
               "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\Peripheral.cs",
               "RelativeToolTip": "Models\\Peripheral.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T08:10:50.665Z"
+              "WhenOpened": "2026-11-03T08:10:50.665Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
               "Title": "SoftwareLicense.cs",
               "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\SoftwareLicense.cs",
               "RelativeDocumentMoniker": "Models\\SoftwareLicense.cs",
               "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Models\\SoftwareLicense.cs",
               "RelativeToolTip": "Models\\SoftwareLicense.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T08:11:00.307Z"
+              "WhenOpened": "2026-11-03T08:11:00.307Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 1,
               "Title": "INetworkable.cs",
               "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Interfaces\\INetworkable.cs",
               "RelativeDocumentMoniker": "Interfaces\\INetworkable.cs",
@@ -240,19 +266,21 @@
               "RelativeToolTip": "Interfaces\\INetworkable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T08:11:52.513Z"
+              "WhenOpened": "2026-11-03T08:11:52.513Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 0,
               "Title": "IBorrowable.cs",
               "DocumentMoniker": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Interfaces\\IBorrowable.cs",
               "RelativeDocumentMoniker": "Interfaces\\IBorrowable.cs",
               "ToolTip": "C:\\Users\\Jay-R\\OneDrive\\Documents\\GITHUB\\Finals_OptionA_Neri_Bayubay\\OptionA_Neri_Bayubay\\Interfaces\\IBorrowable.cs",
               "RelativeToolTip": "Interfaces\\IBorrowable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-03T08:11:44.493Z"
+              "WhenOpened": "2026-11-03T08:11:44.493Z",
+              "EditorCaption": ""
             }
           ]
         }

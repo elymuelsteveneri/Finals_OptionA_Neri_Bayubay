@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Net.Http;
@@ -16,11 +15,12 @@ namespace Project.UI
             this.client = client;
         }
 
+        // MAIN MENU
         public void Display()
         {
             int choice = 0;
 
-            while (choice != 6)
+            while (choice != 10)
             {
                 Console.Clear();
                 Console.WriteLine("╔════════════════════════════════╗");
@@ -31,7 +31,11 @@ namespace Project.UI
                 Console.WriteLine("║[3] View Asset Details          ║");
                 Console.WriteLine("║[4] Update Asset                ║");
                 Console.WriteLine("║[5] Delete Asset                ║");
-                Console.WriteLine("║[6] Exit                        ║");
+                Console.WriteLine("║[6] Check Out Asset             ║");
+                Console.WriteLine("║[7] Check In Asset              ║");
+                Console.WriteLine("║[8] Search and Filter Assets    ║");
+                Console.WriteLine("║[9] View Reports                ║");
+                Console.WriteLine("║[10] Exit                       ║");
                 Console.WriteLine("╚════════════════════════════════╝");
 
                 choice = ReadInt("Enter choice: ");
@@ -59,11 +63,27 @@ namespace Project.UI
                         break;
 
                     case 6:
+                        CheckOutAsset();
+                        break;
+
+                    case 7:
+                        CheckInAsset();
+                        break;
+
+                    case 8:
+                        SearchAndFilterMenu();
+                        break;
+
+                    case 9:
+                        ReportsMenu();
+                        break;
+
+                    case 10:
                         Console.WriteLine("\nThank you for using the system!");
                         break;
 
                     default:
-                        Console.WriteLine("\nInvalid choice. Please select 1-6.");
+                        Console.WriteLine("\nInvalid choice. Please select 1-10.");
                         Pause();
                         break;
                 }
@@ -78,8 +98,7 @@ namespace Project.UI
 
             AssetRequest asset = new AssetRequest();
 
-            Console.WriteLine("\n");
-            Console.WriteLine("╔════════════════════════════╗");
+            Console.WriteLine("\n╔════════════════════════════╗");
             Console.WriteLine("║     Select Asset Type      ║");
             Console.WriteLine("╠════════════════════════════╣");
             Console.WriteLine("║[1] Workstation             ║");
@@ -114,7 +133,6 @@ namespace Project.UI
                     return;
             }
 
-            // Common asset information
             asset.AssetTag = ReadRequired("\nAsset Tag: ");
             asset.Name = ReadRequired("Asset Name: ");
 
@@ -124,61 +142,34 @@ namespace Project.UI
             asset.PurchasePrice =
                 ReadDecimal("Purchase Price: ");
 
-            // Workstation information
             if (asset.AssetType == "Workstation")
             {
                 asset.Cpu = ReadRequired("CPU: ");
-
-                asset.RamGb =
-                    ReadPositiveInt("RAM (GB): ");
-
-                asset.LabRoom =
-                    ReadRequired("Lab Room: ");
-
-                asset.IpAddress =
-                    ReadRequired("IP Address: ");
-
-                asset.MacAddress =
-                    ReadRequired("MAC Address: ");
+                asset.RamGb = ReadPositiveInt("RAM (GB): ");
+                asset.LabRoom = ReadRequired("Lab Room: ");
+                asset.IpAddress = ReadRequired("IP Address: ");
+                asset.MacAddress = ReadRequired("MAC Address: ");
             }
-
-            // Networking Hardware information
             else if (asset.AssetType == "NetworkingHardware")
             {
-                asset.DeviceModel =
-                    ReadRequired("Device Model: ");
-
-                asset.PortCount =
-                    ReadPositiveInt("Port Count: ");
-
-                asset.IpAddress =
-                    ReadRequired("IP Address: ");
-
-                asset.MacAddress =
-                    ReadRequired("MAC Address: ");
+                asset.DeviceModel = ReadRequired("Device Model: ");
+                asset.PortCount = ReadPositiveInt("Port Count: ");
+                asset.IpAddress = ReadRequired("IP Address: ");
+                asset.MacAddress = ReadRequired("MAC Address: ");
             }
-
-            // Peripheral information
             else if (asset.AssetType == "Peripheral")
             {
-                asset.DeviceType =
-                    ReadRequired("Device Type: ");
+                asset.DeviceType = ReadRequired("Device Type: ");
             }
-
-            // Software License information
             else if (asset.AssetType == "SoftwareLicense")
             {
-                asset.Vendor =
-                    ReadRequired("Vendor: ");
-
-                asset.SeatCount =
-                    ReadPositiveInt("Seat Count: ");
+                asset.Vendor = ReadRequired("Vendor: ");
+                asset.SeatCount = ReadPositiveInt("Seat Count: ");
 
                 asset.SubscriptionEndDate =
                     ReadDate("Subscription End Date (yyyy-MM-dd): ");
             }
 
-            // Send information to API
             try
             {
                 HttpResponseMessage response =
@@ -211,17 +202,7 @@ namespace Project.UI
                     client.GetFromJsonAsync<List<AssetResponse>>("api/asset")
                     .GetAwaiter().GetResult()!;
 
-                if (assets == null || assets.Count == 0)
-                {
-                    Console.WriteLine("\nNo assets found.");
-                }
-                else
-                {
-                    foreach (AssetResponse asset in assets)
-                    {
-                        DisplayAsset(asset);
-                    }
-                }
+                DisplayAssetList(assets);
             }
             catch (Exception ex)
             {
@@ -294,8 +275,7 @@ namespace Project.UI
 
                 AssetRequest update = new AssetRequest();
 
-                update.Name =
-                    ReadRequired("\nNew Asset Name: ");
+                update.Name = ReadRequired("\nNew Asset Name: ");
 
                 update.PurchaseDate =
                     ReadDate("New Purchase Date (yyyy-MM-dd): ");
@@ -361,6 +341,391 @@ namespace Project.UI
             Pause();
         }
 
+        // CHECK OUT ASSET
+        private void CheckOutAsset()
+        {
+            Console.Clear();
+            Console.WriteLine("═════════ CHECK OUT ASSET ═════════");
+
+            string tag = ReadRequired("\nEnter Asset Tag: ");
+            string borrowerId = ReadRequired("Enter Borrower ID: ");
+
+            try
+            {
+                var request = new
+                {
+                    AssetTag = tag,
+                    BorrowerId = borrowerId
+                };
+
+                HttpResponseMessage response =
+                    client.PostAsJsonAsync("api/asset/checkout", request)
+                    .GetAwaiter().GetResult();
+
+                string message =
+                    response.Content.ReadAsStringAsync()
+                    .GetAwaiter().GetResult();
+
+                Console.WriteLine("\n" + message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("\nConnection error: " + ex.Message);
+            }
+
+            Pause();
+        }
+
+        // CHECK IN ASSET
+        private void CheckInAsset()
+        {
+            Console.Clear();
+            Console.WriteLine("═════════ CHECK IN ASSET ═════════");
+
+            string tag = ReadRequired("\nEnter Asset Tag: ");
+
+            try
+            {
+                var request = new
+                {
+                    AssetTag = tag
+                };
+
+                HttpResponseMessage response =
+                    client.PostAsJsonAsync("api/asset/checkin", request)
+                    .GetAwaiter().GetResult();
+
+                string message =
+                    response.Content.ReadAsStringAsync()
+                    .GetAwaiter().GetResult();
+
+                Console.WriteLine("\n" + message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("\nConnection error: " + ex.Message);
+            }
+
+            Pause();
+        }
+
+        // SEARCH AND FILTER MENU
+        private void SearchAndFilterMenu()
+        {
+            int choice = 0;
+
+            while (choice != 4)
+            {
+                Console.Clear();
+
+                Console.WriteLine("╔════════════════════════════════╗");
+                Console.WriteLine("║      SEARCH AND FILTER         ║");
+                Console.WriteLine("╠════════════════════════════════╣");
+                Console.WriteLine("║[1] Search by Name or Tag       ║");
+                Console.WriteLine("║[2] Filter by Asset Type        ║");
+                Console.WriteLine("║[3] Filter by Asset Status      ║");
+                Console.WriteLine("║[4] Back to Main Menu           ║");
+                Console.WriteLine("╚════════════════════════════════╝");
+
+                choice = ReadInt("Enter choice: ");
+
+                switch (choice)
+                {
+                    case 1:
+                        SearchAssets();
+                        break;
+
+                    case 2:
+                        FilterByType();
+                        break;
+
+                    case 3:
+                        FilterByStatus();
+                        break;
+
+                    case 4:
+                        break;
+
+                    default:
+                        Console.WriteLine("\nInvalid choice. Please select 1-4.");
+                        Pause();
+                        break;
+                }
+            }
+        }
+
+        // SEARCH BY NAME OR TAG
+        private void SearchAssets()
+        {
+            Console.Clear();
+            Console.WriteLine("═════════ SEARCH ASSETS ═════════");
+
+            string searchText =
+                ReadRequired("\nEnter Asset Name or Tag: ");
+
+            try
+            {
+                List<AssetResponse> assets =
+                    client.GetFromJsonAsync<List<AssetResponse>>(
+                        "api/asset/search?text=" +
+                        Uri.EscapeDataString(searchText))
+                    .GetAwaiter().GetResult()!;
+
+                Console.WriteLine("\nSearch Results:");
+                DisplayAssetList(assets);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("\nSearch error: " + ex.Message);
+            }
+
+            Pause();
+        }
+
+        // FILTER BY ASSET TYPE
+        private void FilterByType()
+        {
+            Console.Clear();
+
+            Console.WriteLine("═════════ FILTER BY TYPE ═════════");
+            Console.WriteLine("[1] Workstation");
+            Console.WriteLine("[2] Networking Hardware");
+            Console.WriteLine("[3] Peripheral");
+            Console.WriteLine("[4] Software License");
+
+            int choice = ReadInt("\nSelect Asset Type: ");
+
+            string type;
+
+            switch (choice)
+            {
+                case 1:
+                    type = "Workstation";
+                    break;
+
+                case 2:
+                    type = "NetworkingHardware";
+                    break;
+
+                case 3:
+                    type = "Peripheral";
+                    break;
+
+                case 4:
+                    type = "SoftwareLicense";
+                    break;
+
+                default:
+                    Console.WriteLine("\nInvalid asset type.");
+                    Pause();
+                    return;
+            }
+
+            try
+            {
+                List<AssetResponse> assets =
+                    client.GetFromJsonAsync<List<AssetResponse>>(
+                        "api/asset/type/" + type)
+                    .GetAwaiter().GetResult()!;
+
+                Console.WriteLine("\nFiltered Assets:");
+                DisplayAssetList(assets);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("\nFilter error: " + ex.Message);
+            }
+
+            Pause();
+        }
+
+        // FILTER BY ASSET STATUS
+        private void FilterByStatus()
+        {
+            Console.Clear();
+
+            Console.WriteLine("═════════ FILTER BY STATUS ═════════");
+            Console.WriteLine("[1] Available");
+            Console.WriteLine("[2] Checked Out");
+            Console.WriteLine("[3] In Repair");
+            Console.WriteLine("[4] Retired");
+
+            int choice = ReadInt("\nSelect Asset Status: ");
+
+            string status;
+
+            switch (choice)
+            {
+                case 1:
+                    status = "Available";
+                    break;
+
+                case 2:
+                    status = "CheckedOut";
+                    break;
+
+                case 3:
+                    status = "InRepair";
+                    break;
+
+                case 4:
+                    status = "Retired";
+                    break;
+
+                default:
+                    Console.WriteLine("\nInvalid asset status.");
+                    Pause();
+                    return;
+            }
+
+            try
+            {
+                List<AssetResponse> assets =
+                    client.GetFromJsonAsync<List<AssetResponse>>(
+                        "api/asset/status/" + status)
+                    .GetAwaiter().GetResult()!;
+
+                Console.WriteLine("\nFiltered Assets:");
+                DisplayAssetList(assets);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("\nFilter error: " + ex.Message);
+            }
+
+            Pause();
+        }
+
+        // REPORTS MENU
+        private void ReportsMenu()
+        {
+            int choice = 0;
+
+            while (choice != 3)
+            {
+                Console.Clear();
+
+                Console.WriteLine("╔════════════════════════════════╗");
+                Console.WriteLine("║          ASSET REPORTS         ║");
+                Console.WriteLine("╠════════════════════════════════╣");
+                Console.WriteLine("║[1] Maintenance Report          ║");
+                Console.WriteLine("║[2] Depreciation Report         ║");
+                Console.WriteLine("║[3] Back to Main Menu           ║");
+                Console.WriteLine("╚════════════════════════════════╝");
+
+                choice = ReadInt("Enter choice: ");
+
+                switch (choice)
+                {
+                    case 1:
+                        ViewMaintenanceReport();
+                        break;
+
+                    case 2:
+                        ViewDepreciationReport();
+                        break;
+
+                    case 3:
+                        break;
+
+                    default:
+                        Console.WriteLine("\nInvalid choice. Please select 1-3.");
+                        Pause();
+                        break;
+                }
+            }
+        }
+
+        // MAINTENANCE REPORT
+        private void ViewMaintenanceReport()
+        {
+            Console.Clear();
+            Console.WriteLine("═════════ MAINTENANCE REPORT ═════════");
+
+            try
+            {
+                List<AssetResponse> assets =
+                    client.GetFromJsonAsync<List<AssetResponse>>(
+                        "api/asset/maintenance")
+                    .GetAwaiter().GetResult()!;
+
+                if (assets == null || assets.Count == 0)
+                {
+                    Console.WriteLine(
+                        "\nNo assets currently need maintenance.");
+                }
+                else
+                {
+                    Console.WriteLine("\nAssets Needing Maintenance:");
+                    DisplayAssetList(assets);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("\nReport error: " + ex.Message);
+            }
+
+            Pause();
+        }
+
+        // DEPRECIATION REPORT
+        private void ViewDepreciationReport()
+        {
+            Console.Clear();
+            Console.WriteLine("═════════ DEPRECIATION REPORT ═════════");
+
+            try
+            {
+                List<AssetResponse> assets =
+                    client.GetFromJsonAsync<List<AssetResponse>>(
+                        "api/asset/depreciation")
+                    .GetAwaiter().GetResult()!;
+
+                if (assets == null || assets.Count == 0)
+                {
+                    Console.WriteLine("\nNo assets available for the report.");
+                }
+                else
+                {
+                    decimal totalValue = 0;
+
+                    foreach (AssetResponse asset in assets)
+                    {
+                        DisplayAsset(asset);
+                        totalValue += asset.DepreciatedValue;
+                    }
+
+                    Console.WriteLine("\n──────────────────────────────────────────────");
+                    Console.WriteLine("Total Current Asset Value: " +
+                        totalValue.ToString("N2"));
+                    Console.WriteLine("──────────────────────────────────────────────");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("\nReport error: " + ex.Message);
+            }
+
+            Pause();
+        }
+
+        // DISPLAY A LIST OF ASSETS
+        private void DisplayAssetList(List<AssetResponse> assets)
+        {
+            if (assets == null || assets.Count == 0)
+            {
+                Console.WriteLine("\nNo matching assets found.");
+                return;
+            }
+
+            Console.WriteLine("\nTotal Results: " + assets.Count);
+
+            foreach (AssetResponse asset in assets)
+            {
+                DisplayAsset(asset);
+            }
+        }
+
         // DISPLAY ASSET INFORMATION
         private void DisplayAsset(AssetResponse asset)
         {
@@ -368,12 +733,18 @@ namespace Project.UI
             Console.WriteLine("Asset Type: " + asset.AssetType);
             Console.WriteLine("Asset Tag: " + asset.AssetTag);
             Console.WriteLine("Name: " + asset.Name);
+
             Console.WriteLine("Purchase Date: " +
                 asset.PurchaseDate.ToString("yyyy-MM-dd"));
-            Console.WriteLine("Purchase Price: " + asset.PurchasePrice);
-            Console.WriteLine("Status: " + asset.Status);
+
+            Console.WriteLine("Purchase Price: " +
+                asset.PurchasePrice.ToString("N2"));
+
+            Console.WriteLine("Status: " + GetStatusName(asset.Status));
             Console.WriteLine("Maintenance: " + asset.MaintenanceStatus);
-            Console.WriteLine("Current Value: " + asset.DepreciatedValue);
+
+            Console.WriteLine("Current Value: " +
+                asset.DepreciatedValue.ToString("N2"));
 
             if (asset.AssetType == "Workstation")
             {
@@ -400,6 +771,7 @@ namespace Project.UI
             {
                 Console.WriteLine("Vendor: " + asset.Vendor);
                 Console.WriteLine("Seat Count: " + asset.SeatCount);
+
                 Console.WriteLine("Subscription End Date: " +
                     asset.SubscriptionEndDate.ToString("yyyy-MM-dd"));
             }
@@ -407,9 +779,29 @@ namespace Project.UI
             Console.WriteLine("──────────────────────────────────────────────");
         }
 
-        // INPUT VALIDATION
+        // CONVERT STATUS NUMBER TO NAME
+        private string GetStatusName(int status)
+        {
+            switch (status)
+            {
+                case 0:
+                    return "Available";
 
-        // Makes sure the user enters something
+                case 1:
+                    return "CheckedOut";
+
+                case 2:
+                    return "InRepair";
+
+                case 3:
+                    return "Retired";
+
+                default:
+                    return "Unknown";
+            }
+        }
+
+        // INPUT VALIDATION
         private string ReadRequired(string message)
         {
             while (true)
@@ -427,7 +819,6 @@ namespace Project.UI
             }
         }
 
-        // Validates integer input
         private int ReadInt(string message)
         {
             int number;
@@ -447,7 +838,6 @@ namespace Project.UI
             }
         }
 
-        // Validates positive whole numbers
         private int ReadPositiveInt(string message)
         {
             int number;
@@ -465,7 +855,6 @@ namespace Project.UI
             }
         }
 
-        // Validates price
         private decimal ReadDecimal(string message)
         {
             decimal number;
@@ -490,7 +879,6 @@ namespace Project.UI
             }
         }
 
-        // Validates date
         private DateTime ReadDate(string message)
         {
             DateTime date;
@@ -529,14 +917,14 @@ namespace Project.UI
             }
         }
 
-        // Validates Y or N confirmation
         private string ReadConfirmation(string message)
         {
             while (true)
             {
                 Console.Write(message);
 
-                string input = (Console.ReadLine() ?? "").Trim().ToUpper();
+                string input =
+                    (Console.ReadLine() ?? "").Trim().ToUpper();
 
                 if (input == "Y" || input == "N")
                 {
@@ -554,7 +942,7 @@ namespace Project.UI
         }
     }
 
-    // Data sent to the API
+    // DATA SENT TO THE API
     public class AssetRequest
     {
         public string AssetType { get; set; } = "";
@@ -580,7 +968,7 @@ namespace Project.UI
         public string MacAddress { get; set; } = "";
     }
 
-    // Data received from the API
+    // DATA RECEIVED FROM THE API
     public class AssetResponse
     {
         public string AssetType { get; set; } = "";

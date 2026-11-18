@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OptionA_Neri_Bayubay")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4b4c340929f2ea2c5a359e34bcb9bb997e2f52b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e08b2c73f99c90c28dc76a35b0997eecc3afeb8")]
 [assembly: System.Reflection.AssemblyProductAttribute("OptionA_Neri_Bayubay")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OptionA_Neri_Bayubay")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

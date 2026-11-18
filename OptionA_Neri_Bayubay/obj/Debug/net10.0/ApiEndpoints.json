@@ -76,7 +76,7 @@
       },
       {
         "Name": "request",
-        "Type": "OptionA_Neri_Bayubay.Models.AssetRequest",
+        "Type": "OptionA_Neri_Bayubay.Models.AssetUpdateRequest",
         "IsRequired": true
       }
     ],
@@ -97,5 +97,155 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CampusITTracker.Controllers.AssetController",
+    "Method": "CheckInAsset",
+    "RelativePath": "api/Asset/checkin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CampusITTracker.Controllers.CheckInRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CampusITTracker.Controllers.AssetController",
+    "Method": "CheckOutAsset",
+    "RelativePath": "api/Asset/checkout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CampusITTracker.Controllers.CheckOutRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CampusITTracker.Controllers.AssetController",
+    "Method": "GetDepreciationReport",
+    "RelativePath": "api/Asset/depreciation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[OptionA_Neri_Bayubay.Models.AssetResponse, OptionA_Neri_Bayubay, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CampusITTracker.Controllers.AssetController",
+    "Method": "GetMaintenanceReport",
+    "RelativePath": "api/Asset/maintenance",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[OptionA_Neri_Bayubay.Models.AssetResponse, OptionA_Neri_Bayubay, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CampusITTracker.Controllers.AssetController",
+    "Method": "SearchAssets",
+    "RelativePath": "api/Asset/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "text",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[OptionA_Neri_Bayubay.Models.AssetResponse, OptionA_Neri_Bayubay, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CampusITTracker.Controllers.AssetController",
+    "Method": "GetByStatus",
+    "RelativePath": "api/Asset/status/{status}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[OptionA_Neri_Bayubay.Models.AssetResponse, OptionA_Neri_Bayubay, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CampusITTracker.Controllers.AssetController",
+    "Method": "GetByType",
+    "RelativePath": "api/Asset/type/{typeName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "typeName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[OptionA_Neri_Bayubay.Models.AssetResponse, OptionA_Neri_Bayubay, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

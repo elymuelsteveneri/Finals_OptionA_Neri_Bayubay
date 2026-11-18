@@ -1,102 +1,120 @@
-﻿using System.Text.Json.Serialization;
+﻿using System;
+using System.Text.Json.Serialization;
 
 namespace OptionA_Neri_Bayubay.Models
 {
+    [JsonPolymorphic(TypeDiscriminatorPropertyName = "$assetType")]
+    [JsonDerivedType(typeof(Workstation), "workstation")]
+    [JsonDerivedType(typeof(NetworkingHardware), "networkingHardware")]
+    [JsonDerivedType(typeof(Peripheral), "peripheral")]
+    [JsonDerivedType(typeof(SoftwareLicense), "softwareLicense")]
     public abstract class CampusAsset
     {
-        // These are private so the outside world cannot change them directly.
-        private decimal purchasePrice;
-        private AssetStatus status;
+        [JsonInclude]
+        public string AssetTag { get; private set; }
 
-        public string AssetTag { get; set; }
         public string Name { get; set; }
+
         public DateTime PurchaseDate { get; set; }
 
-        // A property with a simple check.
+        private decimal purchasePrice;
+
         public decimal PurchasePrice
         {
             get { return purchasePrice; }
             set
             {
                 if (value < 0)
-                {
                     throw new Exception("Price cannot be negative.");
-                }
+
                 purchasePrice = value;
             }
         }
 
-        // Status can only be READ from outside.
-        public AssetStatus Status
-        {
-            get { return status; }
-        }
+        [JsonInclude]
+        public AssetStatus Status { get; private set; }
 
-        // Normal constructor.
-        public CampusAsset(string tag, string name, DateTime purchaseDate, decimal price)
+        public CampusAsset(
+            string tag,
+            string name,
+            DateTime purchaseDate,
+            decimal price)
         {
-            AssetTag = tag;
-            Name = name;
+            if (string.IsNullOrWhiteSpace(tag))
+                throw new Exception("Asset tag is required.");
+
+            if (string.IsNullOrWhiteSpace(name))
+                throw new Exception("Asset name is required.");
+
+            if (purchaseDate.Date > DateTime.Today)
+                throw new Exception("Purchase date cannot be in the future.");
+
+            AssetTag = tag.Trim();
+            Name = name.Trim();
             PurchaseDate = purchaseDate;
             PurchasePrice = price;
-            status = AssetStatus.Available;
+
+            Status = AssetStatus.Available;
         }
 
-        // Empty constructor (for child classes that need it).
+        // Parameterless constructor for JSON deserialization
         public CampusAsset()
         {
             AssetTag = "";
             Name = "";
-            status = AssetStatus.Available;
+            Status = AssetStatus.Available;
         }
-
-        // ---- Methods that change status safely ----
 
         public void MarkInRepair()
         {
-            if (status == AssetStatus.CheckedOut)
-            {
+            if (Status == AssetStatus.CheckedOut)
                 throw new Exception("Cannot send to repair: asset is checked out.");
-            }
-            if (status == AssetStatus.Retired)
-            {
+
+            if (Status == AssetStatus.Retired)
                 throw new Exception("Cannot send to repair: asset is retired.");
-            }
-            status = AssetStatus.InRepair;
+
+            Status = AssetStatus.InRepair;
         }
 
         public void MarkAvailable()
         {
-            if (status == AssetStatus.CheckedOut)
-            {
+            if (Status == AssetStatus.CheckedOut)
                 throw new Exception("Cannot mark available: asset is checked out.");
-            }
-            status = AssetStatus.Available;
+
+            if (Status == AssetStatus.Retired)
+                throw new Exception("Cannot mark available: asset is retired.");
+
+            Status = AssetStatus.Available;
         }
 
         public void Retire()
         {
-            status = AssetStatus.Retired;
+            if (Status == AssetStatus.CheckedOut)
+                throw new Exception("Cannot retire an asset that is checked out.");
+
+            Status = AssetStatus.Retired;
         }
 
-        // These two are used by the borrowing classes.
-        public void SetCheckedOut()
+        protected void SetCheckedOut()
         {
-            status = AssetStatus.CheckedOut;
+            if (Status != AssetStatus.Available)
+                throw new Exception("Only available assets can be checked out.");
+
+            Status = AssetStatus.CheckedOut;
         }
 
-        public void SetReturned()
+        protected void SetReturned()
         {
-            status = AssetStatus.Available;
-        }
+            if (Status != AssetStatus.CheckedOut)
+                throw new Exception("Asset is not currently checked out.");
 
-        // ---- These two methods are different for every asset type ----
+            Status = AssetStatus.Available;
+        }
 
         public abstract string GetMaintenanceStatus();
 
         public abstract decimal CalculateDepreciation();
 
-        // A simple text version of the asset.
         public override string ToString()
         {
             return AssetTag + " - " + Name +

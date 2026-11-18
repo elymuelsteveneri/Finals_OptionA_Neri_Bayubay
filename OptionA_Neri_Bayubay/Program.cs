@@ -1,4 +1,3 @@
-
 using OptionA_Neri_Bayubay.Models;
 
 var builder = WebApplication.CreateBuilder(args);

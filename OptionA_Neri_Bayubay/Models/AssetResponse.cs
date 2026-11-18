@@ -1,5 +1,4 @@
-﻿
-namespace OptionA_Neri_Bayubay.Models
+﻿namespace OptionA_Neri_Bayubay.Models
 {
     public class AssetResponse
     {

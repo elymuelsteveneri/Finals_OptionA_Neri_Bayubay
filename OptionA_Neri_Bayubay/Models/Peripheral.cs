@@ -48,24 +48,30 @@ namespace OptionA_Neri_Bayubay.Models
             get { return BorrowerId != null; }
         }
 
+
         public void CheckOut(string borrowerId)
         {
-            if (borrowerId == null || borrowerId == "")
+            if (string.IsNullOrWhiteSpace(borrowerId))
             {
                 throw new Exception("Borrower ID is required.");
             }
+
             if (Status == AssetStatus.InRepair)
             {
                 throw new Exception("Cannot check out: asset is In Repair.");
             }
+
             if (Status != AssetStatus.Available)
             {
                 throw new Exception("Cannot check out: asset is not available.");
             }
-            BorrowerId = borrowerId;
+
+            BorrowerId = borrowerId.Trim();
             CheckoutDate = DateTime.Now;
+
             SetCheckedOut();
         }
+
 
         public void Return()
         {
